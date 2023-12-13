@@ -1,0 +1,3 @@
+{
+  "PostgreSQLConnection": "Host=localhost;Port=5432;Database=TP_SHOP;Username=postgres;Password=postgres"
+}
