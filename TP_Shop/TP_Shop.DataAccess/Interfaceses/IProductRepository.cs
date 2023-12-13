@@ -10,6 +10,6 @@ namespace TP_Shop.DataAccess.Interfaceses
 {
     public interface IProductRepository : IBaseRepository<Product>
     {
-
+        public IEnumerable<Product> GetByPromoCode(string promoCode);
     }
 }

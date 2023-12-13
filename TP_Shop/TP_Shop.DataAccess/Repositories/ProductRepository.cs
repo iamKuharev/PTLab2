@@ -17,5 +17,9 @@ namespace TP_Shop.DataAccess.Repositories
             
         }
 
+        public IEnumerable<Product> GetByPromoCode(string promoCode)
+        {
+            return _db.Products.Where(p => p.PromoСode.Any(pc => pc.Name == promoCode) || p.PromoСode.Count == 0);
+        }
     }
 }

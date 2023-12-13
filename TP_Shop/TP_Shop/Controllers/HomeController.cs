@@ -20,9 +20,9 @@ namespace TP_Shop.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string promoCode)
         {
-            var products = _productRepository.GetAll().ToList();
+            var products = _productRepository.GetByPromoCode(promoCode).ToList();
             var productsViewModel = new List<ProductViewModel>();
             productsViewModel = products.Select(p => new ProductViewModel()
             {
