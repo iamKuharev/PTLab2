@@ -46,6 +46,11 @@ namespace TP_Shop.Controllers
         [HttpPost]
         public IActionResult Buy(PurchaseViewModel purchaseViewModel)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             purchaseViewModel.Date = DateTime.Now;
             var purchase = new Purchase()
             {
