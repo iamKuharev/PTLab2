@@ -11,13 +11,11 @@ namespace TP_Shop.Controllers
         private readonly IProductRepository _productRepository;
         private readonly IPurchaseRepository _purchaseRepository;
 
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(IProductRepository productRepository, IPurchaseRepository purchaseRepository, ILogger<HomeController> logger)
+        public HomeController(IProductRepository productRepository, IPurchaseRepository purchaseRepository)
         {
             _productRepository = productRepository;
             _purchaseRepository = purchaseRepository;
-            _logger = logger;
         }
 
         public IActionResult Index(string promoCode)

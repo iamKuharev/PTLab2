@@ -19,8 +19,4 @@
     <ProjectReference Include="..\TP_Shop.DataAccess\TP_Shop.DataAccess.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Buy\" />
-  </ItemGroup>
-
 </Project>
