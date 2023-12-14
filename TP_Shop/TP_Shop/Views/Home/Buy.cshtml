@@ -7,19 +7,15 @@
 
 <form method="post" asp-antiforgery="true">
     <div class="mb-3">
-        <input type="hidden" value="@ViewBag.ProductId" name="ProductId" />
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="Address">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <label for="exampleInputPassword1" class="form-label">Введите свое имя</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="Person">
     </div>
     <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" name="Person">
+        <input type="hidden" value="@ViewBag.ProductId" name="ProductId" />
+        <label for="exampleInputEmail1" class="form-label">Введите адрес доставки:</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ул. Ленина" name="Address">
+        <div id="emailHelp" class="form-text">По данному адресу курьер привезет вам товар.</div>
     </div>
-    <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Отправить</button>
 </form>
 
